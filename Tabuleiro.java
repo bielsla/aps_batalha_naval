@@ -6,12 +6,12 @@ public class Tabuleiro {
 
 	EmpresaA empresaA = new EmpresaA ("G&P");
 	EmpresaB empresaB = new EmpresaB ("Coca-Cola");
-	EmpresaC empresaC = new EmpresaC ("Nestlé");
+	EmpresaC empresaC = new EmpresaC ("NestlÃ©");
 	private int tentativas, acertos;
 	private Integer tiroX;
 	private Integer tiroY;
-	private String indexInvalido = "Pera ai! Você está indo para uma área que você não tem permissão.\n"
-									+ "Volte e escolha uma outra área!";
+	private String indexInvalido = "Pera ai! VocÃª estÃ¡ indo para uma Ã¡rea que vocÃª nÃ£o tem permissÃ£o.\n"
+									+ "Volte e escolha uma outra Ã¡rea!";
     
     public int getTentativas() {
 		return tentativas;
@@ -44,7 +44,7 @@ public class Tabuleiro {
             System.out.print((linha)+"");
             for(int coluna=0 ; coluna < 6 ; coluna++ ){
                 if(tabuleiro[linha][coluna]==-1){
-                    System.out.print("\t"+"~");
+                    System.out.print("\t"+"=");
                 }else if(tabuleiro[linha][coluna]==0){
                     System.out.print("\t"+"*");
                 }else if(tabuleiro[linha][coluna]==1){
@@ -106,7 +106,7 @@ public class Tabuleiro {
 		tentativas++;
 		
 		if(tabuleiro[tiroX][tiroY] == 1 || tabuleiro[tiroX][tiroY] == 0) {
-			System.out.println("Você já vasculhou essa posição, tente outra!");
+			System.out.println("VocÃª jÃ¡ vasculhou essa posiÃ§Ã£o, tente outra!");
 		}else {
 		       if(acertou() == true) {
 		            tabuleiro[tiroX][tiroY]=1;
@@ -115,7 +115,7 @@ public class Tabuleiro {
 		        	tiroY = null;
 		        } else
 		            tabuleiro[tiroX][tiroY]=0;
-		       		System.out.println("Você vasculhou o local e não encontrou nada, tudo certo por aqui!");
+		       		System.out.println("VocÃª vasculhou o local e nÃ£o encontrou nada, tudo certo por aqui!");
 		        	tiroX = null;
 		        	tiroY = null;
 		    }

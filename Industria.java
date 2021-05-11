@@ -6,12 +6,15 @@ public abstract class Industria {
 	private String nome;
     private int posicaoX; 
     private int posicaoY; 
-
+    
+    //Metodo Construtor da super classe
     public Industria (String nome) {
     	this.nome = nome;
     	rnd();
     }	
     
+    
+    // Metodo para impedir que o número aleatório se repita para as posições
     public void rnd()
     {
         lock (getrandom); {
@@ -23,6 +26,7 @@ public abstract class Industria {
     private static void lock(Object random2) {	
 	}
 
+    //Getters and Setters
 	public String getNome() {
 		return nome;
 	}
@@ -44,6 +48,7 @@ public abstract class Industria {
         this.posicaoY = posicaoY;
     }
     
+    //Metodo abstrato que será aplicado nas Empresas
     public abstract void texto_especial();
     
 }

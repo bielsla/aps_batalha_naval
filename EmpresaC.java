@@ -6,6 +6,7 @@ public class EmpresaC extends Industria {
 		super(nome);
 	}
 
+	//Metódo abstrato sendo SobreEscrito
 	@Override
 	public void texto_especial() {
 		System.out.println("A Fábrica " + super.getNome() +" está com uma plantação de baunilha que estão devastando a flora da região próxima\n"
